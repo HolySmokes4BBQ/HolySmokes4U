@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Smokes - We Grill at Your Doorstep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf7f2;
+            color: #4a2c2a;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x500') center/cover no-repeat;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            margin-top: 15px;
+        }
+
+        .hero .cta-button {
+            background-color: #e67e22;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #d35400;
+            color: #fff;
+        }
+
+        nav {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #d35400;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .footer-link {
+            color: #e67e22;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        .ingredients {
+            background-color: #ffebcc;
+            padding: 8px;
+            margin-top: 8px;
+            font-size: 14px;
+            border-radius: 5px;
+            display: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients.show {
+            display: block;
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function toggleIngredients(dishName, ingredients, element) {
+            const existingIngredients = element.nextElementSibling;
+
+            if (existingIngredients && existingIngredients.classList.contains('ingredients')) {
+                existingIngredients.classList.toggle('show');
+            } else {
+                const ingredientBox = document.createElement('div');
+                ingredientBox.classList.add('ingredients', 'show');
+                ingredientBox.innerHTML = `<p><strong>Ingredients:</strong> ${ingredients}</p>`;
+                element.parentNode.insertBefore(ingredientBox, element.nextSibling);
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Holy Smokes</h1>
+        <p>We Grill at Your Doorstep</p>
+        <a href="#menu" class="cta-button">Explore Our Menu</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Holy Smokes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p>In 2022, we—two passionate food lovers and best friends—decided to turn our shared love for BBQ into a business. We opened our BBQ venture in India, and what started as a simple idea quickly grew into something much bigger. With our combined skills and enthusiasm for great food, we set out to create an unforgettable BBQ experience for people looking to make their special occasions even more memorable.</p>
+            <p>Our concept was simple: offer mouthwatering BBQ cooked fresh, right in front of our clients. From birthday parties and weddings to corporate events and casual gatherings, we brought the magic of live BBQ cooking to people’s celebrations. Our outdoor catering service was a hit, and soon, we were known for delivering not only delicious food but also a fun, interactive dining experience that delighted our customers.</p>
+            <p>Over the months, we honed our craft, making sure that every BBQ dish we served was full of flavor, love, and the highest quality ingredients. The best part? We didn’t just cook and serve at events—we also offered delivery services, so no one missed out on enjoying our freshly prepared BBQ at home.</p>
+            <p>Now, as our BBQ business continues to thrive in India, we are excited to bring this unique experience to London. With the same dedication, passion, and love for great food, we’re expanding our services to offer live BBQ cooking and outdoor catering to clients in London. Whether you’re hosting a birthday, wedding, or any other special event, we’re here to bring the BBQ to you—cooked fresh on-site or delivered straight to your door.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Menu</h2>
+            <div class="row mt-4">
+                <!-- Vegetarian Starters -->
+                <div class="col-md-4 menu-item">
+                    <h4>Vegetarian Starters</h4>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Paneer Tikka', 'Paneer, yogurt, garlic, ginger paste, red chili powder, garam masala, lemon juice, mustard oil, cilantro.', this)">Paneer Tikka</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Tandoori Paneer', 'Paneer, yogurt, garlic, ginger paste, Kashmiri chili powder, cumin, garam masala, turmeric, mustard oil, lemon juice.', this)">Tandoori Paneer</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Grilled Corn on the Cob', 'Corn, butter, lemon juice, chaat masala, salt, black pepper.', this)">Grilled Corn on the Cob</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Tandoori Mushroom', 'Button mushrooms marinated in spiced yogurt, garlic, ginger, and Indian spices, then grilled.', this)">Tandoori Mushroom</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Tandoori Corn', 'Fresh corn on the cob marinated with chili, lime, and creamy yogurt, grilled to perfection.', this)">Tandoori Corn</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Tandoori Pineapple', 'Pineapple chunks marinated in spicy yogurt and grilled until caramelized.', this)">Tandoori Pineapple</a></p>
+                </div>
+
+                <!-- Non-Vegetarian Starters -->
+                <div class="col-md-4 menu-item">
+                    <h4>Non-Vegetarian Starters</h4>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Chicken Leg Piece', 'Chicken drumsticks, yogurt, ginger-garlic paste, red chili powder, garam masala, lemon juice, mustard oil.', this)">Chicken Leg Piece</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Tandoori Chicken', 'Bone-in chicken, yogurt, ginger-garlic paste, Kashmiri chili powder, cumin, coriander, garam masala, turmeric, mustard oil, lemon juice.', this)">Tandoori Chicken</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Prawns Tikka', 'Fresh prawns, yogurt, garlic, ginger paste, red chili powder, turmeric, garam masala, lemon juice.', this)">Prawns Tikka</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Chicken Tikka', 'Boneless chicken marinated in yogurt, red chili, and Indian spices, cooked in a tandoor.', this)">Chicken Tikka</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Malai Chicken Tikka', 'Creamy chicken marinated with fresh cream, cashew paste, and aromatic spices.', this)">Malai Chicken Tikka</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Hariyali Chicken Tikka', 'Chicken marinated with mint, coriander, and green chilies for a fresh herbal flavor.', this)">Hariyali Chicken Tikka</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Whole Chicken', 'Full chicken marinated in spices and slow-cooked over charcoal for tenderness and smoky aroma.', this)">Whole Chicken</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Tandoori Fish Tikka', 'Fish fillets marinated in yogurt, turmeric, and spices, then grilled to smoky perfection.', this)">Tandoori Fish Tikka</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Seekh Kebab', 'Minced meat blended with fresh herbs, onions, and traditional spices, skewered and grilled to perfection.', this)">Seekh Kebab</a></p>
+                </div>
+
+                <!-- Combo Options -->
+                <div class="col-md-4 menu-item">
+                    <h4>Combo Options</h4>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Vegetarian Combo', 'Paneer Tikka, Grilled Corn, Malai Paneer Tikka.', this)">Vegetarian Combo</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Non-Veg Combo', 'Chicken Leg Piece, Chicken Malai Tikka, Seekh Kebab, Prawns Tikka.', this)">Non-Veg Combo</a></p>
+                    <p><a href="javascript:void(0)" class="cta-button" onclick="toggleIngredients('Mixed Combo', 'Chicken Leg Piece, Paneer Tikka, Fish Tikka, Seekh Kebab.', this)">Mixed Combo</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container text-center">
+            <h2>Our Services</h2>
+            <p>We cater to outdoor events of all sizes, from intimate family gatherings to large corporate events. Let us handle the food while you enjoy the occasion!</p>
+            <p>We provide live BBQ cooking on-site for a fun, interactive, and unforgettable experience. Our catering services include delicious vegetarian and non-vegetarian options, and we also offer combo meal packages for your convenience.</p>
+            <p>Whether you want a full BBQ spread or a more compact setup, we can customize our service to suit your needs, making your event one to remember.</p>
+            <p>Additionally, we offer delivery services for those who prefer to enjoy our BBQ from the comfort of their home or office, ensuring that no one misses out on the Holy Smokes experience!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 contact-card">
+                    <p>Email: <a href="mailto:info.holysmokes1@gmail.com" class="footer-link">info.holysmokes1@gmail.com</a></p>
+                    <p>Phone: +447721979734</p>
+                    <p>Instagram: <a href="https://www.instagram.com/_holyy_smokes" target="_blank" class="footer-link">
+    _holyy_smokes</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-white text-center">
+        <p>&copy; 2025 Holy Smokes. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
